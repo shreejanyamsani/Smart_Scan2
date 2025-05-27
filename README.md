@@ -58,7 +58,7 @@ pneumonia_detection/
 
 Run the Streamlit app:
 ```bash
-streamlit run src/app/streamlit_app.py
+streamlit run main.py
 ```
 
 - **Download Dataset**: Click the "Download Dataset" button in the sidebar to fetch the chest X-ray dataset from Kaggle.
