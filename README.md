@@ -39,7 +39,7 @@ pneumonia_detection/
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/pneumonia_detection.git
-   cd pneumonia_detection
+   cd Smart_Scan2
    ```
 
 2. Install dependencies:
