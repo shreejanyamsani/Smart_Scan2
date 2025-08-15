@@ -6,7 +6,24 @@ from contextlib import redirect_stdout
 from PIL import Image
 
 
-MONGODB_URI = "mongodb+srv://shreejanyamsani:HqfQKFcO1rKL0lJr@cluster0.xcfxtu5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+# Replace with your actual MongoDB credentials
+username = "shreejanyamsani"  # Your MongoDB username
+password = "HqfQKFcO1rKL0lJr"  # Your MongoDB password
+uri = f"mongodb+srv://{username}:{password}@cluster0.xcfxtu5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+# Create a new client and connect to the server
+client = MongoClient(uri, server_api=ServerApi('1'))
+
+# Test connection
+try:
+    client.admin.command('ping')
+    print("✅ Successfully connected to MongoDB!")
+except Exception as e:
+    print("❌ Connection failed:", e)
+
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
@@ -155,6 +172,7 @@ def run_app():
 
 if __name__ == "__main__":
     run_app()
+
 
 
 
