@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import streamlit as st
 
-def get_mongo_client(uri="mongodb+srv://shreejanyamsani:HqfQKFcO1rKL0lJr@cluster0.xcfxtu5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"):
+def get_mongo_client(uri="mongodb+srv://shreejanyamsani:<password>@cluster0.xcfxtu5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"):
     """
     Establish a connection to MongoDB.
     
@@ -19,3 +19,4 @@ def get_mongo_client(uri="mongodb+srv://shreejanyamsani:HqfQKFcO1rKL0lJr@cluster
         st.error("Please ensure MongoDB is running or check your connection string.")
 
         return None
+
