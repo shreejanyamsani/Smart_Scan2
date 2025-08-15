@@ -9,6 +9,8 @@ from ..utils.dataset import download_dataset
 from ..utils.logger import StreamlitLogger
 
 from config.settings import MONGODB_URI
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 def run_app():
     """Run the Streamlit app for pneumonia detection with MongoDB."""
@@ -126,4 +128,5 @@ def run_app():
     except Exception as e:
 
         st.error(f"Error retrieving prediction history: {e}")
+
 
