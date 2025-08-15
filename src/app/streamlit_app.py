@@ -12,8 +12,7 @@ from pymongo.server_api import ServerApi
 # Replace with your actual MongoDB credentials
 username = "shreejanyamsani"  # Your MongoDB username
 password = "HqfQKFcO1rKL0lJr"  # Your MongoDB password
-MONGODB_URI = f"mongodb+srv://{username}:{password}@cluster0.xcfxtu5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-"
+MONGODB_URI = f"mongodb+srv://{username}:{password}@cluster0.xcfxtu5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 # Create a new client and connect to the server
 client = MongoClient(MONGODB_URI, server_api=ServerApi('1'))
@@ -173,6 +172,7 @@ def run_app():
 
 if __name__ == "__main__":
     run_app()
+
 
 
 
