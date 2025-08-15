@@ -6,9 +6,8 @@ from contextlib import redirect_stdout
 from PIL import Image
 
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+MONGODB_URI = "mongodb+srv://shreejanyamsani:HqfQKFcO1rKL0lJr@cluster0.xcfxtu5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
-from config.settings import MONGODB_URI# Ensure project root is in PYTHONPATH for absolute imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
@@ -156,5 +155,6 @@ def run_app():
 
 if __name__ == "__main__":
     run_app()
+
 
 
