@@ -15,7 +15,7 @@ password = "HqfQKFcO1rKL0lJr"  # Your MongoDB password
 MONGODB_URI = f"mongodb+srv://{username}:{password}@cluster0.xcfxtu5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 # Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
+client = MongoClient(MONGODB_URI, server_api=ServerApi('1'))
 
 # Test connection
 try:
@@ -172,6 +172,7 @@ def run_app():
 
 if __name__ == "__main__":
     run_app()
+
 
 
 
