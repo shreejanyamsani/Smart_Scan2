@@ -9,7 +9,7 @@ from PIL import Image
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 # Local imports
-from config.settings import MONGODB_URI
+from ..config.settings import MONGODB_URI
 from core.detector import PneumoniaDetector
 from database.connection import get_mongo_client
 from utils.dataset import download_dataset
@@ -154,3 +154,4 @@ def run_app():
 
 if __name__ == "__main__":
     run_app()
+
