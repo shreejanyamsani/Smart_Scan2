@@ -3,10 +3,11 @@ import streamlit as st
 from datetime import datetime
 from contextlib import redirect_stdout
 from PIL import Image
-from core.detector import PneumoniaDetector
-from database.connection import get_mongo_client
-from utils.dataset import download_dataset
-from utils.logger import StreamlitLogger
+from ..core.detector import PneumoniaDetector
+from ..database.connection import get_mongo_client
+from ..utils.dataset import download_dataset
+from ..utils.logger import StreamlitLogger
+
 from config.settings import MONGODB_URI
 
 def run_app():
@@ -125,3 +126,4 @@ def run_app():
     except Exception as e:
 
         st.error(f"Error retrieving prediction history: {e}")
+
