@@ -3,15 +3,15 @@ import streamlit as st
 from datetime import datetime
 from contextlib import redirect_stdout
 from PIL import Image
-from ..core.detector import PneumoniaDetector
-from ..database.connection import get_mongo_client
-from ..utils.dataset import download_dataset
-from ..utils.logger import StreamlitLogger
+
 
 from config.settings import MONGODB_URI
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
+from core.detector import PneumoniaDetector
+from database.connection import get_mongo_client
+from utils.dataset import download_dataset
+from utils.logger import StreamlitLogger
 def run_app():
     """Run the Streamlit app for pneumonia detection with MongoDB."""
     st.title("Pneumonia Detection from Chest X-Ray Images")
@@ -128,5 +128,6 @@ def run_app():
     except Exception as e:
 
         st.error(f"Error retrieving prediction history: {e}")
+
 
 
